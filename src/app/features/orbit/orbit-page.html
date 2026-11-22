@@ -1,0 +1,23 @@
+<app-sim-shell sim="orbit">
+  <app-board data-slot="board" [scene]="this" [running]="playing()" [label]="i18n.t('sims.orbit.board')" aspect="16 / 10" aspectNarrow="1 / 1" />
+
+  <div data-slot="controls">
+    <div class="mb-5 flex flex-wrap gap-3">
+      <button type="button" class="btn btn-primary" (click)="playing.set(!playing())" [disabled]="crashed()">
+        {{ playing() ? i18n.t('common.pause') : i18n.t('common.play') }}
+      </button>
+      <button type="button" class="btn" (click)="restart()">{{ i18n.t('common.reset') }}</button>
+    </div>
+    <div class="grid items-end gap-x-10 gap-y-4 sm:grid-cols-2">
+      <app-tray-slider [label]="i18n.t('sims.orbit.params.altitude')" unit="km" [min]="200" [max]="36000" [step]="50" [(value)]="altitude" />
+      <app-tray-slider [label]="i18n.t('sims.orbit.params.ratio')" unit="× v" [min]="0.6" [max]="1.5" [step]="0.01" [digits]="2" [(value)]="ratio" />
+    </div>
+  </div>
+
+  <div data-slot="measurements">
+    <app-readout-list [rows]="rows()" />
+    <p class="mt-3 max-w-[48ch] text-[0.95rem] leading-snug text-chalk-dim">{{ timelapse() }}</p>
+  </div>
+  <app-formula-list data-slot="formulas" [items]="formulas()" />
+  <app-challenge-panel data-slot="challenges" [challenges]="challenges" i18nKey="sims.orbit.challenges" (applied)="apply($event)" />
+</app-sim-shell>

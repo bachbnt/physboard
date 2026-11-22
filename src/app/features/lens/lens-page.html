@@ -1,0 +1,24 @@
+<app-sim-shell sim="lens">
+  <app-board data-slot="board" [scene]="this" [running]="false" [draggable]="true" [label]="i18n.t('sims.lens.board')" aspect="16 / 10" aspectNarrow="4 / 3" />
+
+  <div data-slot="controls">
+    <div class="mb-5 flex flex-wrap items-center gap-x-6 gap-y-3">
+      <div class="segmented" role="group" [attr.aria-label]="i18n.t('sims.lens.params.kind')">
+        <button type="button" [attr.aria-pressed]="diverging() === 0" (click)="diverging.set(0)">{{ i18n.t('sims.lens.kinds.converging') }}</button>
+        <button type="button" [attr.aria-pressed]="diverging() === 1" (click)="diverging.set(1)">{{ i18n.t('sims.lens.kinds.diverging') }}</button>
+      </div>
+    </div>
+    <div class="grid items-end gap-x-10 gap-y-4 sm:grid-cols-3">
+      <app-tray-slider [label]="i18n.t('sims.lens.params.focal')" unit="cm" [min]="5" [max]="30" [step]="0.5" [digits]="1" [(value)]="focal" />
+      <app-tray-slider [label]="i18n.t('sims.lens.params.distance')" unit="cm" [min]="5" [max]="80" [step]="0.5" [digits]="1" [(value)]="distance" />
+      <app-tray-slider [label]="i18n.t('sims.lens.params.height')" unit="cm" [min]="1" [max]="6" [step]="0.5" [digits]="1" [(value)]="objectHeight" />
+    </div>
+  </div>
+
+  <app-readout-list data-slot="measurements" [rows]="rows()" />
+  <div data-slot="formulas">
+    <app-formula-list [items]="formulas()" />
+    <p class="mt-5 max-w-[48ch] leading-snug text-chalk-dim">{{ i18n.t('sims.lens.signRule') }}</p>
+  </div>
+  <app-challenge-panel data-slot="challenges" [challenges]="challenges" i18nKey="sims.lens.challenges" (applied)="apply($event)" />
+</app-sim-shell>

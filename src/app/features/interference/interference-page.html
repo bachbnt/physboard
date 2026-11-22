@@ -1,0 +1,27 @@
+<app-sim-shell sim="interference">
+  <app-board data-slot="board" [scene]="this" [running]="running()" [label]="i18n.t('sims.interference.board')" aspect="16 / 10" aspectNarrow="1 / 1" />
+
+  <div data-slot="controls">
+    <div class="mb-5 flex flex-wrap items-center gap-x-6 gap-y-3">
+      @if (view() === 'wave') {
+        <button type="button" class="btn btn-primary" (click)="playing.set(!playing())">
+          {{ playing() ? i18n.t('common.pause') : i18n.t('common.play') }}
+        </button>
+      }
+      <div class="segmented" role="group" [attr.aria-label]="i18n.t('sims.interference.view.label')">
+        <button type="button" [attr.aria-pressed]="view() === 'wave'" (click)="view.set('wave')">{{ i18n.t('sims.interference.view.wave') }}</button>
+        <button type="button" [attr.aria-pressed]="view() === 'intensity'" (click)="view.set('intensity')">{{ i18n.t('sims.interference.view.intensity') }}</button>
+      </div>
+      <button type="button" class="chip" [attr.aria-pressed]="lines()" (click)="lines.set(!lines())">{{ i18n.t('sims.interference.view.lines') }}</button>
+    </div>
+    <div class="grid items-end gap-x-10 gap-y-4 sm:grid-cols-3">
+      <app-tray-slider [label]="i18n.t('sims.interference.params.wavelength')" unit="cm" [min]="1" [max]="6" [step]="0.1" [digits]="1" [(value)]="wavelength" />
+      <app-tray-slider [label]="i18n.t('sims.interference.params.separation')" unit="cm" [min]="2" [max]="16" [step]="0.5" [digits]="1" [(value)]="separation" />
+      <app-tray-slider [label]="i18n.t('sims.interference.params.phase')" unit="°" [min]="0" [max]="360" [step]="15" [(value)]="phase" />
+    </div>
+  </div>
+
+  <app-readout-list data-slot="measurements" [rows]="rows()" />
+  <app-formula-list data-slot="formulas" [items]="formulas()" />
+  <app-challenge-panel data-slot="challenges" [challenges]="challenges" i18nKey="sims.interference.challenges" (applied)="apply($event)" />
+</app-sim-shell>

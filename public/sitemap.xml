@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://physdex.web.app/</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/en</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/projectile</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/projectile"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/projectile"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/projectile"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/en/projectile</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/projectile"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/projectile"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/projectile"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/pendulum</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/pendulum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/pendulum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/pendulum"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/en/pendulum</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/pendulum"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/pendulum"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/pendulum"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/interference</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/interference"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/interference"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/interference"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/en/interference</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/interference"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/interference"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/interference"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/orbit</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/orbit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/orbit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/orbit"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/en/orbit</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/orbit"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/orbit"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/orbit"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/rlc</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/rlc"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/rlc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/rlc"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/en/rlc</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/rlc"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/rlc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/rlc"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/lens</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/lens"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/lens"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/lens"/>
+  </url>
+  <url>
+    <loc>https://physdex.web.app/en/lens</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://physdex.web.app/lens"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://physdex.web.app/en/lens"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://physdex.web.app/lens"/>
+  </url>
+</urlset>

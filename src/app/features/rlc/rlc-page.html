@@ -1,0 +1,24 @@
+<app-sim-shell sim="rlc">
+  <app-board data-slot="board" [scene]="this" [running]="playing()" [label]="i18n.t('sims.rlc.board')" aspect="16 / 10" aspectNarrow="3 / 5" />
+
+  <div data-slot="controls">
+    <div class="mb-5 flex flex-wrap gap-3">
+      <button type="button" class="btn btn-primary" (click)="playing.set(!playing())">
+        {{ playing() ? i18n.t('common.pause') : i18n.t('common.play') }}
+      </button>
+    </div>
+    <div class="grid items-end gap-x-10 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
+      <app-tray-slider [label]="i18n.t('sims.rlc.params.resistance')" unit="Ω" [min]="5" [max]="200" [step]="1" [(value)]="resistance" />
+      <app-tray-slider [label]="i18n.t('sims.rlc.params.inductance')" unit="mH" [min]="10" [max]="500" [step]="5" [(value)]="inductance" />
+      <app-tray-slider [label]="i18n.t('sims.rlc.params.capacitance')" unit="µF" [min]="1" [max]="100" [step]="1" [(value)]="capacitance" />
+      <app-tray-slider [label]="i18n.t('sims.rlc.params.frequency')" unit="Hz" [min]="20" [max]="600" [step]="1" [(value)]="frequency" />
+    </div>
+  </div>
+
+  <div data-slot="measurements">
+    <app-readout-list [rows]="rows()" />
+    <p class="mt-3 max-w-[48ch] font-chalk text-[1.3rem] leading-snug text-chalk-yellow">{{ phaseText() }}</p>
+  </div>
+  <app-formula-list data-slot="formulas" [items]="formulas()" />
+  <app-challenge-panel data-slot="challenges" [challenges]="challenges" i18nKey="sims.rlc.challenges" (applied)="apply($event)" />
+</app-sim-shell>

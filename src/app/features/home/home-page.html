@@ -1,0 +1,37 @@
+<section
+  class="mx-auto grid max-w-6xl items-center gap-8 px-4 pb-10 pt-2 sm:px-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12"
+>
+  <div>
+    <h1 class="text-[clamp(2.9rem,6.4vw,4.9rem)] leading-[1.02] text-chalk">{{ i18n.t('home.headline') }}</h1>
+    <p class="mt-5 max-w-[34ch] text-[1.15rem] leading-relaxed text-chalk-dim">{{ i18n.t('home.lead') }}</p>
+  </div>
+  <div>
+    <app-board [scene]="hero" [running]="running()" [draggable]="true" [label]="i18n.t('sims.pendulum.board')" aspect="16 / 11" aspectNarrow="5 / 4" />
+    <div class="ledge" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="mx-auto max-w-6xl px-4 pb-12 pt-6 sm:px-6" aria-labelledby="list-title">
+  <h2 id="list-title" class="sr-only">{{ i18n.t('home.listTitle') }}</h2>
+  <div class="chalk-rule mb-9"></div>
+  <div class="grid gap-x-14 gap-y-12 md:grid-cols-2">
+    @for (group of groups(); track group.group) {
+      <section>
+        <h3 class="mb-4 text-[2.1rem] leading-none text-chalk-yellow">{{ group.title }}</h3>
+        <ul class="space-y-6">
+          @for (sim of group.sims; track sim.id) {
+            <li>
+              <a [routerLink]="sim.path" class="sim-link group flex items-start gap-4">
+                <app-sim-icon [id]="sim.id" class="shrink-0 opacity-90 transition-transform group-hover:-rotate-3" />
+                <span class="min-w-0">
+                  <span class="block font-chalk text-[1.9rem] leading-tight text-chalk underline decoration-transparent decoration-2 underline-offset-[6px] transition-colors group-hover:decoration-chalk-yellow">{{ sim.title }}</span>
+                  <span class="mt-1 block max-w-[40ch] leading-snug text-chalk-dim">{{ sim.short }}</span>
+                </span>
+              </a>
+            </li>
+          }
+        </ul>
+      </section>
+    }
+  </div>
+</section>

@@ -1,0 +1,41 @@
+<app-sim-shell sim="projectile">
+  <app-board data-slot="board" [scene]="this" [running]="running()" [label]="i18n.t('sims.projectile.board')" aspect="16 / 9" aspectNarrow="4 / 3" />
+
+  <div data-slot="controls">
+    <div class="mb-5 flex flex-wrap items-center gap-3">
+      <button type="button" class="btn btn-primary" (click)="launchNow()">
+        {{ flying() || landedOnce() ? i18n.t('common.launchAgain') : i18n.t('common.launch') }}
+      </button>
+      @if (flying()) {
+        <button type="button" class="btn" (click)="paused.set(!paused())">
+          {{ paused() ? i18n.t('common.play') : i18n.t('common.pause') }}
+        </button>
+      }
+    </div>
+    <div class="grid items-end gap-x-10 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+      <app-tray-slider [label]="i18n.t('sims.projectile.params.speed')" unit="m/s" [min]="5" [max]="50" [step]="1" [(value)]="speed" />
+      <app-tray-slider [label]="i18n.t('sims.projectile.params.angle')" unit="°" [min]="0" [max]="90" [step]="1" [(value)]="angle" />
+      <app-tray-slider [label]="i18n.t('sims.projectile.params.height')" unit="m" [min]="0" [max]="30" [step]="1" [(value)]="height" />
+      <div>
+        <app-tray-slider [label]="i18n.t('sims.projectile.params.gravity')" unit="m/s²" [min]="1.6" [max]="24.8" [step]="0.01" [digits]="2" [(value)]="gravity" />
+        <div class="mt-1 flex flex-wrap gap-2">
+          @for (preset of presets; track preset.key) {
+            <button type="button" class="chip" [attr.aria-pressed]="gravity() === preset.g" (click)="gravity.set(preset.g)">
+              {{ i18n.t('sims.projectile.presets.' + preset.key) }}
+            </button>
+          }
+        </div>
+      </div>
+      <app-tray-slider [label]="i18n.t('sims.projectile.params.drag')" unit="1/m" [min]="0" [max]="0.05" [step]="0.001" [digits]="3" [(value)]="drag" />
+    </div>
+  </div>
+
+  <div data-slot="measurements">
+    <app-readout-list [rows]="rows()" />
+    @if (drag() > 0) {
+      <p class="mt-3 max-w-[48ch] text-[0.95rem] leading-snug text-chalk-dim">{{ i18n.t('sims.projectile.readouts.measured') }}</p>
+    }
+  </div>
+  <app-formula-list data-slot="formulas" [items]="formulas()" />
+  <app-challenge-panel data-slot="challenges" [challenges]="challenges" i18nKey="sims.projectile.challenges" (applied)="apply($event)" />
+</app-sim-shell>

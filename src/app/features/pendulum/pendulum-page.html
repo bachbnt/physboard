@@ -1,0 +1,29 @@
+<app-sim-shell sim="pendulum">
+  <app-board
+    data-slot="board"
+    [scene]="this"
+    [running]="playing()"
+    [draggable]="true"
+    [label]="i18n.t('sims.pendulum.board')"
+    aspect="16 / 10" aspectNarrow="4 / 5"
+  />
+
+  <div data-slot="controls">
+    <div class="mb-5 flex flex-wrap gap-3">
+      <button type="button" class="btn btn-primary" (click)="playing.set(!playing())">
+        {{ playing() ? i18n.t('common.pause') : i18n.t('common.play') }}
+      </button>
+      <button type="button" class="btn" (click)="restart()">{{ i18n.t('common.reset') }}</button>
+    </div>
+    <div class="grid items-end gap-x-10 gap-y-4 sm:grid-cols-2 lg:grid-cols-4">
+      <app-tray-slider [label]="i18n.t('sims.pendulum.params.length')" unit="m" [min]="0.2" [max]="3" [step]="0.05" [digits]="2" [(value)]="length" />
+      <app-tray-slider [label]="i18n.t('sims.pendulum.params.angle')" unit="°" [min]="5" [max]="170" [step]="1" [(value)]="angle" />
+      <app-tray-slider [label]="i18n.t('sims.pendulum.params.gravity')" unit="m/s²" [min]="1.6" [max]="24.8" [step]="0.01" [digits]="2" [(value)]="gravity" />
+      <app-tray-slider [label]="i18n.t('sims.pendulum.params.damping')" unit="1/s" [min]="0" [max]="1" [step]="0.05" [digits]="2" [(value)]="damping" />
+    </div>
+  </div>
+
+  <app-readout-list data-slot="measurements" [rows]="rows()" />
+  <app-formula-list data-slot="formulas" [items]="formulas()" />
+  <app-challenge-panel data-slot="challenges" [challenges]="challenges" i18nKey="sims.pendulum.challenges" (applied)="apply($event)" />
+</app-sim-shell>
