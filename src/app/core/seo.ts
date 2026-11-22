@@ -3,7 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { I18n, LANGS, pathFor } from '../i18n/i18n';
 
-export const SITE_URL = 'https://physdex.web.app';
+export const SITE_URL = 'https://physboard.web.app';
 
 const OG_LOCALE = { vi: 'vi_VN', en: 'en_US' } as const;
 

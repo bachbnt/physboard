@@ -1,6 +1,6 @@
-# Physdex
+# Physboard
 
-🌐 **Live:** https://physdex.web.app
+🌐 **Live:** https://physboard.web.app
 
 Interactive physics simulations for high-school students, in **Vietnamese and English**. Drag the weight, change the numbers, and watch the physics run.
 
@@ -59,10 +59,10 @@ Settings live in the URL (`/pendulum?l=1&th=60&g=9.81&b=0`), so any setup can be
 npm install
 npm start          # dev server at http://localhost:4200
 npm test           # unit and component tests
-npm run build      # prerender both languages into dist/physdex/browser
+npm run build      # prerender both languages into dist/physboard/browser
 ```
 
-Deploy with `npm run deploy:firebase` (needs the Firebase CLI and access to the `physdex` project).
+Deploy with `npm run deploy:firebase` (needs the Firebase CLI and access to the `physboard` project).
 
 ## Project layout
 

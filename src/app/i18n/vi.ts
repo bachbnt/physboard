@@ -4,7 +4,7 @@
  */
 export const vi = {
   site: {
-    name: 'Physdex',
+    name: 'Physboard',
     tagline: 'Mô phỏng vật lý tương tác',
     description:
       'Kéo, chỉnh, rồi xem vật lý chạy: ném xiên, con lắc, giao thoa sóng, quỹ đạo vệ tinh, mạch RLC và thấu kính, kèm công thức và thử thách.',

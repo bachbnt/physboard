@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "physdex": {
+    "physboard": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -62,10 +62,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "physdex:build:production"
+              "buildTarget": "physboard:build:production"
             },
             "development": {
-              "buildTarget": "physdex:build:development"
+              "buildTarget": "physboard:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,5 +1,5 @@
 {
-  "name": "physdex",
+  "name": "physboard",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -40,5 +40,5 @@
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
   },
-  "description": "Physdex \u2014 interactive physics simulations for high-school students, in Vietnamese and English."
+  "description": "Physboard \u2014 interactive physics simulations for high-school students, in Vietnamese and English."
 }

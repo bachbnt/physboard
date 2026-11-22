@@ -2,7 +2,7 @@ import type { Dict } from './dictionary';
 
 export const en: Dict = {
   site: {
-    name: 'Physdex',
+    name: 'Physboard',
     tagline: 'Interactive physics simulations',
     description:
       'Drag, adjust, and watch the physics run: projectile motion, pendulum, wave interference, satellite orbits, RLC circuits and lenses, with formulas and challenges.',

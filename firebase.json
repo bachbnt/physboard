@@ -1,7 +1,7 @@
 {
   "hosting": {
-    "site": "physdex",
-    "public": "dist/physdex/browser",
+    "site": "physboard",
+    "public": "dist/physboard/browser",
     "cleanUrls": true,
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "headers": [
