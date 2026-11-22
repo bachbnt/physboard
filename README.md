@@ -1,5 +1,7 @@
 # Physdex
 
+🌐 **Live:** https://physdex.web.app
+
 Interactive physics simulations for high-school students, in **Vietnamese and English**. Drag the weight, change the numbers, and watch the physics run.
 
 | Simulation | Topic |
@@ -12,6 +14,24 @@ Interactive physics simulations for high-school students, in **Vietnamese and En
 | Thin lens | Optics: ray diagram for converging and diverging lenses, real and virtual images |
 
 Each page has live measurements, the formulas behind them, a short explanation, and three numeric challenges that load their own preset into the simulation and check your answer.
+
+## Screenshots
+
+| Home: the pendulum you can pick up | Projectile motion |
+| --- | --- |
+| ![Home page with the draggable pendulum on a chalkboard](docs/screenshots/home.jpg) | ![A projectile's parabola with its range marked](docs/screenshots/projectile.jpg) |
+
+| Simple pendulum | Wave interference |
+| --- | --- |
+| ![Pendulum with its angle graph and energy bars](docs/screenshots/pendulum.jpg) | ![Two-source interference with the maximum lines drawn](docs/screenshots/interference.jpg) |
+
+| Satellite orbits | Series RLC circuit |
+| --- | --- |
+| ![An elliptical orbit around Earth](docs/screenshots/orbit.jpg) | ![Phasor diagram, waveforms and resonance curve](docs/screenshots/rlc.jpg) |
+
+| Thin lens | On a phone |
+| --- | --- |
+| ![Ray diagram of a converging lens forming a real image](docs/screenshots/lens.jpg) | <img src="docs/screenshots/mobile.jpg" alt="The pendulum page on a phone" width="260" /> |
 
 ## Why trust the numbers
 

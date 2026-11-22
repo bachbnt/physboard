@@ -216,7 +216,7 @@ export class RlcPage implements Scene {
       g.line(sx(f), bottom, sx(f), bottom + 5, { width: 1.3, color: CHALK.dim, seed: 32 + f });
       g.text(`${f}`, sx(f), bottom + 20, { size: 15, color: CHALK.dim, align: 'center' });
     }
-    g.text('Hz', right, bottom + 20, { size: 15, color: CHALK.dim, align: 'right' });
+    g.text('Hz', right, bottom - 8, { size: 15, color: CHALK.dim, align: 'right' });
 
     const pts: Point[] = [];
     for (let k = 0; k <= 160; k++) {
